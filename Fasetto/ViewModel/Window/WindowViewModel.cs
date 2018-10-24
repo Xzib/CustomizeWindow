@@ -30,7 +30,9 @@ namespace Fasetto
 
         #endregion
 
+        #region Commands
 
+        #endregion
 
 
         #region Public Properties

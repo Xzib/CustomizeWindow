@@ -47,7 +47,7 @@
                                             <ColumnDefinition Width="Auto"/>
                                         </Grid.ColumnDefinitions>
 
-                                        <Button WindowChrome.IsHitTestVisibleInChrome="True"
+                                        <Button Style="{StaticResource SystemIconButton}"
                                                 Command="{Binding MenuCommand}">
                                             <Image Source="/images/logo/Logo.ico"/>
                                         </Button>
