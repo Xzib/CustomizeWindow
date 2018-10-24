@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Input;
 
 namespace Fasetto
 {
@@ -31,6 +32,10 @@ namespace Fasetto
         #endregion
 
         #region Commands
+        public ICommand Minimize { get; set; }
+        public ICommand Maximize { get; set; }
+        public ICommand Close { get; set; }
+        public ICommand MenuCommand { get; set; }
 
         #endregion
 
@@ -118,6 +123,9 @@ namespace Fasetto
                 OnPropertyChanged(nameof(WindowRadius));
                 OnPropertyChanged(nameof(WindowCornerRadius));
             };
+
+
+
 
         }
         #endregion
