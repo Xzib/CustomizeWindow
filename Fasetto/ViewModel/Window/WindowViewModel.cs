@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -22,19 +23,19 @@ namespace Fasetto
         /// <summary>
         /// The Size of the outerMargin
         /// </summary>
-        private int mOuterMarginSize=10;
+        private int mOuterMarginSize = 10;
 
         /// <summary>
         /// The radius of the window
         /// </summary>
-        private int mWindowRadius=10;
+        private int mWindowRadius = 10;
 
         #endregion
 
         #region Commands
-        public ICommand Minimize { get; set; }
-        public ICommand Maximize { get; set; }
-        public ICommand Close { get; set; }
+        public ICommand MinimizeCommand { get; set; }
+        public ICommand MaximizeCommand { get; set; }
+        public ICommand CloseCommand { get; set; }
         public ICommand MenuCommand { get; set; }
 
         #endregion
@@ -51,7 +52,7 @@ namespace Fasetto
         /// The size of the resizeborder taking into account the outer margin
         /// </summary>
         public Thickness ResizeBorederThickness { get { return new Thickness(ResizeBorder + OuterMarginSize); } }
-        
+
         /// <summary>
         /// The property to set and assign values to outerMargin
         /// </summary>
@@ -92,14 +93,14 @@ namespace Fasetto
         /// <summary>
         /// Set Corner Window Radius
         /// </summary>
-        public CornerRadius WindowCornerRadius{ get { return new CornerRadius(WindowRadius); }  }
+        public CornerRadius WindowCornerRadius { get { return new CornerRadius(WindowRadius); } }
 
         /// <summary>
         /// The height of the CaptionBar
         /// </summary>
         public int TitleHeight { get; set; } = 42;
 
-        public GridLength TitleHeightGridLength { get { return new GridLength(TitleHeight+ResizeBorder); } }
+        public GridLength TitleHeightGridLength { get { return new GridLength(TitleHeight + ResizeBorder); } }
 
 
         #endregion
@@ -123,11 +124,38 @@ namespace Fasetto
                 OnPropertyChanged(nameof(WindowRadius));
                 OnPropertyChanged(nameof(WindowCornerRadius));
             };
+            MinimizeCommand = new RelayCommand(() => mWindow.WindowState = WindowState.Minimized);
+            MaximizeCommand = new RelayCommand(() => mWindow.WindowState ^= WindowState.Maximized);
+            CloseCommand = new RelayCommand(() => mWindow.Close());
+            MenuCommand = new RelayCommand(() => SystemCommands.ShowSystemMenu(mWindow, GetMousePosition()));
 
 
 
 
         }
+        #endregion
+
+        #region PrivateHelpers
+        [DllImport("user32.dll")]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        internal static extern bool GetCursorPos(ref Win32Point pt);
+        [StructLayout(LayoutKind.Sequential)]
+
+        internal struct Win32Point
+        {
+            public Int32 X;
+            public Int32 Y;
+
+        }
+
+        private static Point GetMousePosition()
+        {
+            Win32Point w32Mouse = new Win32Point();
+            GetCursorPos(ref w32Mouse);
+            return new Point(w32Mouse.X, w32Mouse.Y);
+        }
+
+
         #endregion
     }
 }
