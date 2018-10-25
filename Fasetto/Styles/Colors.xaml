@@ -18,7 +18,7 @@
     <SolidColorBrush x:Key="ForegroundVeryDarkBrush" 
                      Color="{StaticResource ForegroundVeryDark}"/>
 
-    <Color x:Key="ForegroundLight">ffffff</Color>
+    <Color x:Key="ForegroundLight">#ffffff</Color>
     <SolidColorBrush x:Key="ForegroundLightBrush" Color="{StaticResource ForegroundLight}"/>
 
 

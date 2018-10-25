@@ -10,7 +10,7 @@
         x:Name="ViewModelWindow"
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
-        Title="Welcome Freinds" Height="600" Width="900">
+        Title="Yarn Godown" Height="600" Width="900">
 
 
     <Window.Resources>
@@ -21,6 +21,10 @@
                         <Border Padding="{Binding OutMarginSizeThickness, FallbackValue=10}">
                             <!--Main Window Outline-->
                             <Grid>
+                                <!--opacity mask for corners on grid-->
+                                <Border x:Name="Container"
+                                        Background="{StaticResource BackgroundVeryLightBrush}"
+                                        CornerRadius="{Binding WindowCornerRadius, FallbackValue=10}"/>
                                 <!--Main window with resizeable outline margin-->
                                 <Border CornerRadius="{Binding WindowCornerRadius, FallbackValue=10}" 
                                         Background="{Binding ForegroundLightBrush, FallbackValue=White}">
@@ -30,6 +34,11 @@
                                 </Border>
                                 <!--The main window content-->
                                 <Grid>
+                                    
+                                    <!--corner opacity-->
+                                    <Grid.OpacityMask>
+                                        <VisualBrush Visual="{Binding ElementName=Container}"/>
+                                    </Grid.OpacityMask>
                                     <Grid.RowDefinitions>
                                         
                                         <!--TitleBar-->
@@ -56,6 +65,12 @@
                                             <TextBlock Style="{StaticResource HeaderText}" Text="{Binding RelativeSource={RelativeSource TemplatedParent},
                                                 Path=Title, FallbackValue='Welcome, Friends'}"/>
                                         </Viewbox>
+
+                                        <StackPanel Orientation="Horizontal" Grid.Column="2">
+                                            <Button Command="{Binding MinimizeCommand}" Style="{StaticResource WindowCommandButton}" Content="_"></Button>
+                                            <Button Command="{Binding MaximizeCommand}" Style="{StaticResource WindowCommandButton}"  Content="[]"></Button>
+                                            <Button Command="{Binding CloseCommand}" Style="{StaticResource WindowCloseButton}"  Content="X"></Button>
+                                        </StackPanel>
 
                                     </Grid>
                                 </Grid>
@@ -86,6 +101,7 @@
     </WindowChrome.WindowChrome>
 
     <Grid Background="Red">
+        
 
 
     </Grid

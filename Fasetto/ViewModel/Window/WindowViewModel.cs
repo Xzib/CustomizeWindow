@@ -40,7 +40,6 @@ namespace Fasetto
 
         #endregion
 
-
         #region Public Properties
 
         /// <summary>
@@ -105,13 +104,12 @@ namespace Fasetto
 
         #endregion
 
+        #region Constructer
 
         /// <summary>
         /// Default Constructor
         /// </summary>
         /// <param name="window"></param>
-
-        #region Constructer
 
         public WindowViewModel(Window window)
         {
