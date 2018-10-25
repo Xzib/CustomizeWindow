@@ -52,6 +52,11 @@
                                             <Image Source="/images/logo/Logo.ico"/>
                                         </Button>
 
+                                        <Viewbox Margin="0" Grid.Column="1" >
+                                            <TextBlock Style="{StaticResource HeaderText}" Text="{Binding RelativeSource={RelativeSource TemplatedParent},
+                                                Path=Title, FallbackValue='Welcome, Friends'}"/>
+                                        </Viewbox>
+
                                     </Grid>
                                 </Grid>
 
