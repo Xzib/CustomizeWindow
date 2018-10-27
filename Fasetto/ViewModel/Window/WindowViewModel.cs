@@ -48,6 +48,16 @@ namespace Fasetto
         public int ResizeBorder { get; set; } = 6;
 
         /// <summary>
+        /// The minimssum Width of the Window
+        /// </summary>
+        public int MinWindowWidth { get; set; } = 400;
+
+        /// <summary>
+        /// The minimum height of the Window
+        /// </summary>
+        public int MinWindowHeight { get; set; } = 400;
+
+        /// <summary>
         /// The size of the resizeborder taking into account the outer margin
         /// </summary>
         public Thickness ResizeBorederThickness { get { return new Thickness(ResizeBorder + OuterMarginSize); } }
