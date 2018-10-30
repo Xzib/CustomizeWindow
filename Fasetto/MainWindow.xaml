@@ -94,12 +94,17 @@
                                         </Border.BorderBrush>
 
                                     </Border>
+                                    
+                                    <Border Grid.Row="2" Padding="{Binding InnerContentBorder}">
+                                        <ContentPresenter Content="{TemplateBinding Content}"/>
+                                    </Border>
 
 
                                 </Grid>
+                                
 
-                                
-                                
+
+
 
                             </Grid>
 
@@ -124,9 +129,7 @@
     </WindowChrome.WindowChrome>
 
     <Grid Background="Red">
-        
-
-
+        <Button Content="Test"/>
     </Grid
   >
 </Window>

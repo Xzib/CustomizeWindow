@@ -63,6 +63,11 @@ namespace Fasetto
         public Thickness ResizeBorederThickness { get { return new Thickness(ResizeBorder + OuterMarginSize); } }
 
         /// <summary>
+        /// The inner padding of the main content window
+        /// </summary>
+        public Thickness InnerBorderContent { get { return new Thickness(ResizeBorder); } }
+
+        /// <summary>
         /// The property to set and assign values to outerMargin
         /// </summary>
         public int OuterMarginSize
