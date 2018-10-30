@@ -62,6 +62,8 @@ namespace Fasetto
         /// </summary>
         public Thickness ResizeBorederThickness { get { return new Thickness(ResizeBorder + OuterMarginSize); } }
 
+        public Thickness InnerContectThickness { get { return new Thickness(ResizeBorder); } }
+
         /// <summary>
         /// The property to set and assign values to outerMargin
         /// </summary>
@@ -110,6 +112,11 @@ namespace Fasetto
         public int TitleHeight { get; set; } = 42;
 
         public GridLength TitleHeightGridLength { get { return new GridLength(TitleHeight + ResizeBorder); } }
+
+        /// <summary>
+        /// The Current Page of the application
+        /// </summary>
+        public ApplicationPage CurrentPage { get; set; } = ApplicationPage.Login;
 
 
         #endregion
