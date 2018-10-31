@@ -163,7 +163,9 @@
   <ItemGroup>
     <Resource Include="Images\logo\Logo.ico" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\Background\download.jpg" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="FodyWeavers.xml" />
   </ItemGroup>
