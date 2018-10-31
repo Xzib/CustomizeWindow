@@ -63,10 +63,25 @@
                                             <Image Source="/images/logo/Logo.ico"/>
                                         </Button>
 
-                                        <Viewbox Margin="0" Grid.Column="1" >
-                                            <TextBlock >
-                                               
-                                            </TextBlock>
+                                        <Viewbox Margin="0" Grid.Column="0" Grid.ColumnSpan="3" >
+                                            <StackPanel>
+
+                                                <TextBlock FontFamily="{StaticResource Lato Bold}">
+                                                    <Run Text="W" Foreground="{StaticResource ForegroundOrangeBrush}"/><Run Text="O" Foreground="{StaticResource ForegroundRedBrush}"/><Run Text="R" Foreground="{StaticResource ForegroundBlueBrush}"/><Run Text="D" Foreground="{StaticResource ForegroundGreenBrush}"/>
+                                                </TextBlock>
+                                                <Grid>
+                                                    
+                                                    <TextBlock Grid.ColumnSpan="1" Margin="-5 0 0 0 "
+                                                        VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                        Foreground="{StaticResource ForegroundDarkBrush}" 
+                                                           FontFamily="{StaticResource Lato Thin}"
+                                                           FontSize="{StaticResource SmallFont}"
+                                                           Text="By Zohaib Ali">
+                                                    </TextBlock>
+
+                                                </Grid>
+                                                
+                                            </StackPanel>
                                         </Viewbox>
 
                                         <StackPanel Orientation="Horizontal" Grid.Column="2">
