@@ -7,15 +7,32 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="LoginPage">
+  
+    <Border  Background="BlueViolet"
+             Padding="15 50 15 15"
+                Width="400"
+             Margin="50 50 50 0"
+             >
+
+        <StackPanel>
+            <TextBlock Text="Sign In" Padding="0 50"
+                           Style="{StaticResource SignUp}"/>
+
+            <!--Email-->
+            <TextBox Tag="Email" >
+
+            </TextBox >
+            <!--Password-->
+            <TextBox Tag="Password" >
+
+            </TextBox>
+            <!--SignIn Button-->
+            <Button  Content="Login" HorizontalAlignment="Center" />
 
 
-    <Border>
-        <Grid>
-            <Grid.Background>
-                <ImageBrush ViewportUnits="Absolute" Viewport="200 20 500 400"
-                            ImageSource="/Images/background/download.jpg" Opacity="0.2"/>
-            </Grid.Background>
-        </Grid>
+
+        </StackPanel>
+
     </Border>
-   
+
 </Page>
