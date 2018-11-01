@@ -5,10 +5,26 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Fasetto"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="1000" d:DesignWidth="1000"
       Title="LoginPage">
 
-    <Grid>
-        
-    </Grid>
+    <Border>
+        <ScrollViewer>
+            <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <Grid.Background>
+                    <ImageBrush 
+                        Stretch="Fill"
+                        TileMode="Tile"
+                        ViewportUnits="Absolute" 
+                        Viewport="0 0 1000 1000"
+                        ImageSource="/Images/Background/ArtisticLogo.JPG"
+                               
+                                
+                            
+                            />
+                </Grid.Background>
+            </Grid>
+        </ScrollViewer>
+
+    </Border>
 </Page>
