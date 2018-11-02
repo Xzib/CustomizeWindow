@@ -1,6 +1,7 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:local="clr-namespace:Fasetto">
+                    xmlns:local="clr-namespace:Fasetto"
+                    xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero">
 
     
         <ResourceDictionary.MergedDictionaries>
@@ -73,8 +74,49 @@
             </Trigger>
         </Style.Triggers>
     </Style>
+    
+    <!--RegularButton-->
+    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource BaseStyle}">
+        <Setter Property="FontSize" Value="{StaticResource LargeFont}"/>
+        <Setter Property="FontFamily" Value="{StaticResource Lato Regular}"/>
+        <Setter Property="Padding" Value="50 10"/>
 
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ButtonBase}">
+                    <Themes:ButtonChrome x:Name="Chrome" 
+                                         BorderBrush="{TemplateBinding BorderBrush}" 
+                                         Background="{TemplateBinding Background}" 
+                                         RenderMouseOver="{TemplateBinding IsMouseOver}" 
+                                         RenderPressed="{TemplateBinding IsPressed}" 
+                                         RenderDefaulted="{TemplateBinding Button.IsDefaulted}" 
+                                         SnapsToDevicePixels="True">
+                        <TextBlock Text="{TemplateBinding Content}" 
+                                   HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                                   Margin="{TemplateBinding Padding}" 
+                                   SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" 
+                                   VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Themes:ButtonChrome>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="{StaticResource ForegroundOrangeBrush}"/>
+                        </Trigger>
+                        <Trigger Property="IsKeyboardFocused" Value="True">
+                            <Setter Property="RenderDefaulted" TargetName="Chrome" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ToggleButton.IsChecked" Value="True">
+                            <Setter Property="RenderPressed" TargetName="Chrome" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Foreground" Value="#FFADADAD"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 
+  
 
 
 
