@@ -9,15 +9,18 @@
         <Setter Property="Margin" Value="0 6"/>
         
     </Style>
+    
+    <!--SignUp TextBlock-->
 
     <Style TargetType="{x:Type TextBlock}" x:Key="SignUp" BasedOn="{StaticResource BaseTextBlockStyle}">
-        <Setter Property="Foreground" Value="{StaticResource ForegroundDarkBrush}"/>
+        <Setter Property="Foreground" Value="{StaticResource ForegroundLightBrush}"/>
+        <Setter Property="FontFamily" Value="{StaticResource Lato Bold}"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="FontSize" Value="{StaticResource RegularFont}"/>
-
-
     </Style>
+    
+    <!--TextBox-->
 
     <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource BaseStyle}">
         <Setter Property="FontSize" Value="{StaticResource LargeFont}"/>
@@ -81,5 +84,48 @@
         </Setter>
 
     </Style>  
+    
+    
+    
+    <!--PasswordBox-->
+
+    <Style TargetType="{x:Type PasswordBox}" BasedOn="{StaticResource BaseStyle}">
+        <Setter Property="FontSize" Value="{StaticResource LargeFont}"/>
+        <Setter Property="FontFamily" Value="{StaticResource Lato Regular}"/>
+        <Setter Property="Padding" Value="10"/>
+        <Setter Property="Margin" Value="0 5 0 5"/>
+        <Setter Property="BorderBrush" Value="{StaticResource ForegroundBlueBrush}"/>
+        <Setter Property="BorderThickness" Value="0 0 0 1"/>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type PasswordBox}">
+                    <Grid>
+                        <Border 
+                        x:Name="border" 
+                        BorderBrush="{TemplateBinding BorderBrush}" 
+                        BorderThickness="{TemplateBinding BorderThickness}" 
+                        Background="{TemplateBinding Background}"   
+                        SnapsToDevicePixels="True">
+                            <ScrollViewer x:Name="PART_ContentHost" Focusable="False" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
+                        </Border>
+                    </Grid>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" TargetName="border" Value="0.56"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" TargetName="border" Value="#FF7EB4EA"/>
+                        </Trigger>
+                        <Trigger Property="IsKeyboardFocused" Value="True">
+                            <Setter Property="BorderBrush" TargetName="border" Value="#FF569DE5"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
 
 </ResourceDictionary>
