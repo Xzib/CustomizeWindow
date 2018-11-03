@@ -60,14 +60,14 @@
 
                                         <Button Style="{StaticResource SystemIconButton}"
                                                 Command="{Binding MenuCommand}">
-                                            <Image Source="/Images/Background/download.jpg"/>
+                                            <Image Source="/images/logo/Logo.ico"/>
                                         </Button>
 
                                         <Viewbox Margin="0" Grid.Column="0" Grid.ColumnSpan="3" >
                                             <StackPanel>
 
                                                 <TextBlock FontFamily="{StaticResource Lato Bold}">
-                                                    <Run Text="Y" Foreground="{StaticResource ForegroundOrangeBrush}"/><Run Text="A" Foreground="{StaticResource ForegroundRedBrush}"/><Run Text="R" Foreground="{StaticResource ForegroundBlueBrush}"/><Run Text="N" Foreground="{StaticResource ForegroundGreenBrush}"/>
+                                                    <Run Text="W" Foreground="{StaticResource ForegroundOrangeBrush}"/><Run Text="O" Foreground="{StaticResource ForegroundRedBrush}"/><Run Text="R" Foreground="{StaticResource ForegroundBlueBrush}"/><Run Text="D" Foreground="{StaticResource ForegroundGreenBrush}"/>
                                                 </TextBlock>
                                                 <Grid>
                                                     
@@ -83,7 +83,6 @@
                                                 
                                             </StackPanel>
                                         </Viewbox>
-                                        <!--Min, Max, Close buttons-->
 
                                         <StackPanel Orientation="Horizontal" Grid.Column="2">
                                             <Button Command="{Binding MinimizeCommand}" 
