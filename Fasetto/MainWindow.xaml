@@ -86,7 +86,7 @@
 
                                         <StackPanel Orientation="Horizontal" Grid.Column="2">
                                             <Button Command="{Binding MinimizeCommand}" 
-                                                    Style="{StaticResource WindowCommandButton}" Content="_"></Button>
+                                                    Style="{StaticResource WindowCommandButton}" Content="_" Margin="0,3,0,-3"></Button>
                                             <Button Command="{Binding MaximizeCommand}" 
                                                     Style="{StaticResource WindowCommandButton}"  Content="[]"></Button>
                                             <Button Command="{Binding CloseCommand}" 
@@ -129,10 +129,6 @@
     </WindowChrome.WindowChrome>
 
     <Grid Background="BlueViolet">
-
         <Frame x:Name="MainFrame" Content="{Binding CurrentPage, Converter={local:ApplicationPageValueConverter}}"/>
-        
-
-    </Grid
-  >
+    </Grid>
 </Window>
