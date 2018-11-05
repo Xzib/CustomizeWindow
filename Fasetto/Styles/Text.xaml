@@ -10,21 +10,32 @@
         
     </Style>
     
-    <!--SignUp TextBlock-->
+    <!--SignIn TextBlock-->
 
-    <Style TargetType="{x:Type TextBlock}" x:Key="SignUp" BasedOn="{StaticResource BaseTextBlockStyle}">
-        <Setter Property="Foreground" Value="{StaticResource ForegroundLightBrush}"/>
+    <Style TargetType="{x:Type TextBlock}" x:Key="SignIn" BasedOn="{StaticResource BaseTextBlockStyle}">
+        <Setter Property="Foreground" Value="{StaticResource ForegroundBlueBrush}"/>
         <Setter Property="FontFamily" Value="{StaticResource Lato Bold}"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="FontSize" Value="{StaticResource RegularFont}"/>
     </Style>
     
+    <!--Statement TextBlock-->
+    
+    <Style TargetType="{x:Type TextBlock}" x:Key="statement" BasedOn="{StaticResource BaseTextBlockStyle}">
+        <Setter Property="Foreground" Value="{StaticResource ForegroundMainBrush}"/>
+        <Setter Property="FontFamily" Value="{StaticResource Lato Thin}"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="FontSize" Value="{StaticResource RegularFont}"/>
+    </Style>
+
+
     <!--TextBox-->
 
     <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource BaseStyle}">
         <Setter Property="FontSize" Value="{StaticResource LargeFont}"/>
-        <Setter Property="FontFamily" Value="{StaticResource Lato Regular}"/>
+        <Setter Property="FontFamily" Value="{StaticResource Lato Thin}"/>
         <Setter Property="Padding" Value="10"/>
         <Setter Property="Margin" Value="0 5 0 5"/>
         <Setter Property="BorderBrush" Value="{StaticResource ForegroundBlueBrush}"/>
