@@ -97,6 +97,12 @@
         <Setter Property="BorderBrush" Value="{StaticResource ForegroundBlueBrush}"/>
         <Setter Property="BorderThickness" Value="0 0 0 1"/>
 
+
+        <Setter Property="local:PasswordBoxText.MonitorPassword" Value="true"/>
+
+
+
+
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type PasswordBox}">
@@ -122,7 +128,7 @@
                                 <Style TargetType="{x:Type TextBlock}">
                                     <Setter Property="Visibility" Value="Collapsed"/>
                                     <Style.Triggers>
-                                        <DataTrigger Binding="{Binding Text, RelativeSource={RelativeSource TemplatedParent}}" Value="">
+                                        <DataTrigger Binding="{Binding (local:PasswordBoxText.HasText), RelativeSource={RelativeSource TemplatedParent}}" Value="False">
                                             <Setter Property="Visibility" Value="Visible"/>
                                         </DataTrigger>
                                     </Style.Triggers>
