@@ -60,14 +60,14 @@
 
                                         <Button Style="{StaticResource SystemIconButton}"
                                                 Command="{Binding MenuCommand}">
-                                            <Image Source="/images/logo/Logo.ico"/>
+                                            <Image Source="/Images/Background/download.jpg"/>
                                         </Button>
 
                                         <Viewbox Margin="0" Grid.Column="0" Grid.ColumnSpan="3" >
                                             <StackPanel>
 
                                                 <TextBlock FontFamily="{StaticResource Lato Bold}">
-                                                    <Run Text="W" Foreground="{StaticResource ForegroundOrangeBrush}"/><Run Text="O" Foreground="{StaticResource ForegroundRedBrush}"/><Run Text="R" Foreground="{StaticResource ForegroundBlueBrush}"/><Run Text="D" Foreground="{StaticResource ForegroundGreenBrush}"/>
+                                                    <Run Text="Y" Foreground="{StaticResource ForegroundOrangeBrush}"/><Run Text="A" Foreground="{StaticResource ForegroundRedBrush}"/><Run Text="R" Foreground="{StaticResource ForegroundBlueBrush}"/><Run Text="N" Foreground="{StaticResource ForegroundGreenBrush}"/>
                                                 </TextBlock>
                                                 <Grid>
                                                     
