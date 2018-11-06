@@ -123,6 +123,8 @@ namespace Fasetto
         /// The Current Page of the application
         /// </summary>
         public ApplicationPage CurrentPage { get; set; } = ApplicationPage.Login;
+
+
         
 
 

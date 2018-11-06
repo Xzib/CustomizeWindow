@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Fasetto"
+        Loaded="Page_Loaded"
         Icon="Images/logo/Logo.ico"
         WindowStyle="None"
         AllowsTransparency="True"
@@ -60,7 +61,7 @@
 
                                         <Button Style="{StaticResource SystemIconButton}"
                                                 Command="{Binding MenuCommand}">
-                                            <Image Source="/images/logo/Logo.ico"/>
+                                            <Image Source="/Images/background/download.jpg"/>
                                         </Button>
 
                                         <Viewbox Margin="0" Grid.Column="0" Grid.ColumnSpan="3" >

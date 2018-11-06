@@ -4,17 +4,16 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Fasetto"
+      
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="LoginPage">
+     
 
 
-    <Border>
+    <Border Background="Navy">
         <Grid>
-            <Grid.Background>
-                <ImageBrush ViewportUnits="Absolute" Viewport="200 20 500 400"
-                            ImageSource="/Images/background/download.jpg" Opacity="0.2"/>
-            </Grid.Background>
+            
         </Grid>
     </Border>
    
