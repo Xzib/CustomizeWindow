@@ -109,7 +109,7 @@
         <Setter Property="BorderThickness" Value="0 0 0 1"/>
 
 
-        <Setter Property="local:PasswordBoxText.MonitorPassword" Value="true"/>
+        <Setter Property="local:MonitorPasswordProperty.Value" Value="true"/>
 
 
 
@@ -134,17 +134,9 @@
                                    Padding="{TemplateBinding Padding}"
                                    VerticalAlignment="Center"
                                    HorizontalAlignment="Center"
-                                   Foreground="{StaticResource ForegroundVeryDarkBrush}">
-                            <TextBlock.Style>
-                                <Style TargetType="{x:Type TextBlock}">
-                                    <Setter Property="Visibility" Value="Collapsed"/>
-                                    <Style.Triggers>
-                                        <DataTrigger Binding="{Binding (local:PasswordBoxText.HasText), RelativeSource={RelativeSource TemplatedParent}}" Value="False">
-                                            <Setter Property="Visibility" Value="Visible"/>
-                                        </DataTrigger>
-                                    </Style.Triggers>
-                                </Style>
-                            </TextBlock.Style>
+                                   Foreground="{StaticResource ForegroundVeryDarkBrush}"
+                                   Visibility="{TemplateBinding local:HasTextProperty.Value, Converter={local:BooleanToVisibilityConverter}}">
+                              
 
                         </TextBlock>
 

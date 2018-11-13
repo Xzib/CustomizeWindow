@@ -72,7 +72,9 @@
     <Compile Include="Pages\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PasswordBoxAttachedProperties.cs" />
     <Compile Include="ValueConverters\ApplicationPageValueConverter.cs" />
+    <Compile Include="ValueConverters\AttachedPropertyValueConverter.cs" />
     <Compile Include="ValueConverters\BaseValueConverter.cs" />
     <Compile Include="ViewModel\Base\BaseClass.cs" />
     <Compile Include="ViewModel\Base\RelayCommand.cs" />
