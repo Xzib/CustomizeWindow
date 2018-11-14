@@ -135,17 +135,7 @@
                                    VerticalAlignment="Center"
                                    HorizontalAlignment="Center"
                                    Foreground="{StaticResource ForegroundVeryDarkBrush}">
-                            <TextBlock.Style>
-                                <Style TargetType="{x:Type TextBlock}">
-                                    <Setter Property="Visibility" Value="Collapsed"/>
-                                    <Style.Triggers>
-                                        <DataTrigger Binding="{Binding (local:PasswordBoxText.HasText), RelativeSource={RelativeSource TemplatedParent}}" Value="False">
-                                            <Setter Property="Visibility" Value="Visible"/>
-                                        </DataTrigger>
-                                    </Style.Triggers>
-                                </Style>
-                            </TextBlock.Style>
-
+                           
                         </TextBlock>
 
                     </Grid>
