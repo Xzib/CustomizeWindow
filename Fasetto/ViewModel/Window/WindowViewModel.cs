@@ -29,6 +29,7 @@ namespace Fasetto
         /// The radius of the window
         /// </summary>
         private int mWindowRadius = 10;
+        
 
         #endregion
 
@@ -63,6 +64,11 @@ namespace Fasetto
         public Thickness ResizeBorederThickness { get { return new Thickness(ResizeBorder + OuterMarginSize); } }
 
         public Thickness InnerContectThickness { get { return new Thickness(ResizeBorder); } }
+
+        /// <summary>
+        /// The inner padding of the main content window
+        /// </summary>
+        public Thickness InnerBorderContent { get; set; } = new Thickness(0);
 
         /// <summary>
         /// The property to set and assign values to outerMargin
@@ -119,6 +125,11 @@ namespace Fasetto
         public ApplicationPage CurrentPage { get; set; } = ApplicationPage.Login;
 
 
+        
+
+
+
+
         #endregion
 
         #region Constructer
@@ -154,7 +165,11 @@ namespace Fasetto
         private Point GetMousePosition()
         {
             var pos = Mouse.GetPosition(mWindow);
-            return new Point(pos.X+mWindow.Left, pos.Y+mWindow.Top);       }
+            return new Point(pos.X+mWindow.Left, pos.Y+mWindow.Top);
+        }
+
+
+       
 
 
         #endregion

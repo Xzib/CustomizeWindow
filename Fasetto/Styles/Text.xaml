@@ -109,7 +109,7 @@
         <Setter Property="BorderThickness" Value="0 0 0 1"/>
 
 
-        <Setter Property="local:PasswordBoxText.MonitorPassword" Value="true"/>
+        <Setter Property="local:MonitorPasswordProperty.Value" Value="true"/>
 
 
 
@@ -134,8 +134,10 @@
                                    Padding="{TemplateBinding Padding}"
                                    VerticalAlignment="Center"
                                    HorizontalAlignment="Center"
-                                   Foreground="{StaticResource ForegroundVeryDarkBrush}">
-                           
+                                   Foreground="{StaticResource ForegroundVeryDarkBrush}"
+                                   Visibility="{TemplateBinding local:HasTextProperty.Value, Converter={local:BooleanToVisibilityConverter}}">
+                              
+
                         </TextBlock>
 
                     </Grid>

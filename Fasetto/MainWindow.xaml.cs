@@ -25,5 +25,12 @@ namespace Fasetto
             InitializeComponent();
             this.DataContext = new WindowViewModel(this);
         }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+
+            ViewModelWindow.WindowState = WindowState.Maximized;
+
+        }
     }
 }
